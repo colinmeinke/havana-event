@@ -1,0 +1,36 @@
+{
+  "name": "havana-event",
+  "version": "0.1.0",
+  "description": "A simple publish/subscribe pattern",
+  "main": "dist/event.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": {
+    "name": "Colin Meinke",
+    "email": "hello@colinmeinke.com",
+    "url": "colinmeinke.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/colinmeinke/havana-event.git"
+  },
+  "keywords": [
+    "es6",
+    "event",
+    "havana",
+    "publish",
+    "pubsub",
+    "subscribe"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "4.0.x",
+    "chai": "3.2.x",
+    "gulp": "3.9.x",
+    "gulp-babel": "5.1.x",
+    "gulp-concat": "2.6.x",
+    "gulp-eslint": "0.15.x",
+    "gulp-mocha": "2.1.x"
+  }
+}
