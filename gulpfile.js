@@ -7,19 +7,28 @@ var mocha = require( 'gulp-mocha' );
 gulp.task( 'lint', function () {
   return gulp.src([
     './gulpfile.js',
-    './lib/event.js',
+    './lib/**/*.js',
+    './test/lib/**/*.js',
   ])
     .pipe( lint())
     .pipe( lint.format());
 });
 
-gulp.task( 'es5', [ 'lint' ], function () {
-  return gulp.src([ './lib/event.js' ])
+gulp.task( 'compileCore', [ 'lint' ], function () {
+  return gulp.src([ './lib/**/*.js' ])
     .pipe( babel())
     .pipe( gulp.dest( './dist' ));
 });
 
-gulp.task( 'polyfill', [ 'es5' ], function () {
+gulp.task( 'compileTests', [ 'lint' ], function () {
+  return gulp.src([ './test/lib/**/*.js' ])
+    .pipe( babel())
+    .pipe( gulp.dest( './test/dist' ));
+});
+
+gulp.task( 'compile', [ 'compileCore', 'compileTests' ]);
+
+gulp.task( 'polyfill', [ 'compile' ], function () {
   return gulp.src([
     './node_modules/gulp-babel/node_modules/babel-core/browser-polyfill.js',
     './dist/event.js',
@@ -28,9 +37,9 @@ gulp.task( 'polyfill', [ 'es5' ], function () {
   .pipe( gulp.dest( './dist' ));
 });
 
-gulp.task( 'test', [ 'polyfill' ], function () {
-  return gulp.src( './test/*.js' )
+gulp.task( 'test', function () {
+  return gulp.src( './test/dist/**/*.js' )
     .pipe( mocha());
 });
 
-gulp.task( 'default', [ 'lint', 'es5', 'polyfill', 'test' ]);
+gulp.task( 'default', [ 'lint', 'compile', 'polyfill', 'test' ]);
