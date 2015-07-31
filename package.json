@@ -16,9 +16,10 @@
     "url": "git://github.com/colinmeinke/havana-event.git"
   },
   "keywords": [
-    "es6",
+    "es2015",
     "event",
     "havana",
+    "isomorphic",
     "publish",
     "pubsub",
     "subscribe"
