@@ -55,7 +55,7 @@ var Event = (function () {
 
       for (var i = 0; i < subs.length; i++) {
         if (token === subs[i].token) {
-          _.get(this).subs.splice(i, 1);
+          subs.splice(i, 1);
           i--;
         }
       }
