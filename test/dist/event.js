@@ -28,6 +28,12 @@ describe('Event', function () {
     callbacks = [];
   });
 
+  describe('_', function () {
+    it('should be private', function () {
+      expect(event).to.not.have.property('_');
+    });
+  });
+
   describe('token', function () {
     it('should be private', function () {
       expect(event).to.not.have.property('token');

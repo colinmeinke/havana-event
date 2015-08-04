@@ -16,6 +16,12 @@ describe( 'Event', () => {
     callbacks = [];
   });
 
+  describe( '_', () => {
+    it( 'should be private', () => {
+      expect( event ).to.not.have.property( '_' );
+    });
+  });
+
   describe( 'token', () => {
     it( 'should be private', () => {
       expect( event ).to.not.have.property( 'token' );
