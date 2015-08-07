@@ -27,7 +27,9 @@ var Event = (function () {
     value: function publish(name) {
       var data = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
-      var subs = _.get(this).subs;
+      var _$get = _.get(this);
+
+      var subs = _$get.subs;
 
       for (var i = 0; i < subs.length; i++) {
         if (name === subs[i].name) {
@@ -51,7 +53,9 @@ var Event = (function () {
   }, {
     key: 'unsubscribe',
     value: function unsubscribe(token) {
-      var subs = _.get(this).subs;
+      var _$get2 = _.get(this);
+
+      var subs = _$get2.subs;
 
       for (var i = 0; i < subs.length; i++) {
         if (token === subs[i].token) {
