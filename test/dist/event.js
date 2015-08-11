@@ -4,9 +4,9 @@
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _distEventWithPolyfill = require('../../dist/event.with-polyfill');
+var _distEventServerWithPolyfill = require('../../dist/event.server.with-polyfill');
 
-var _distEventWithPolyfill2 = _interopRequireDefault(_distEventWithPolyfill);
+var _distEventServerWithPolyfill2 = _interopRequireDefault(_distEventServerWithPolyfill);
 
 var _chai = require('chai');
 
@@ -21,7 +21,7 @@ describe('Event', function () {
       world = undefined;
 
   before(function () {
-    event = new _distEventWithPolyfill2['default']();
+    event = new _distEventServerWithPolyfill2['default']();
   });
 
   beforeEach(function () {

@@ -1,6 +1,6 @@
 /* global describe before beforeEach it */
 
-import Event from '../../dist/event.with-polyfill';
+import Event from '../../dist/event.server.with-polyfill';
 import chai from 'chai';
 
 const expect = chai.expect;

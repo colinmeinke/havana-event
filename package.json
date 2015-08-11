@@ -1,8 +1,8 @@
 {
   "name": "havana-event",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A simple publish/subscribe pattern",
-  "main": "dist/event.js",
+  "main": "dist/event.server.js",
   "scripts": {
     "test": "gulp test"
   },
@@ -28,11 +28,19 @@
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "4.0.x",
+    "babelify": "6.1.x",
+    "browserify": "11.0.x",
     "chai": "3.2.x",
     "gulp": "3.9.x",
     "gulp-babel": "5.1.x",
     "gulp-concat": "2.6.x",
     "gulp-eslint": "0.15.x",
-    "gulp-mocha": "2.1.x"
+    "gulp-insert": "0.5.x",
+    "gulp-mocha": "2.1.x",
+    "gulp-rename": "1.2.x",
+    "vinyl-source-stream": "1.1.x"
+  },
+  "browser": {
+    "dist/event.server.js": "dist/event.browser.js"
   }
 }
