@@ -1,5 +1,6 @@
 # Havana event
 
+[![NPM version](https://badge.fury.io/js/havana-event.svg)](http://badge.fury.io/js/havana-event)
 [![Build Status](https://travis-ci.org/colinmeinke/havana-event.svg?branch=master)](https://travis-ci.org/colinmeinke/havana-event)
 [![Dependency status](https://david-dm.org/colinmeinke/havana-event.svg)](https://david-dm.org/colinmeinke/havana-event.svg)
 
